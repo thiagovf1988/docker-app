@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-LABEL maintainer="Thiago V Fernandes <thiagovf.eng@gmail.com>" \
+LABEL maintainer="Thiago V Fernandes <thiago@ai-distinct.com>" \
     version="1.0"
 
 EXPOSE 8000

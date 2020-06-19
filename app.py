@@ -61,7 +61,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server=serv
 
 app.layout = html.Div([
     html.Div([
-        html.Label(['Exercise 1']),
+        html.Label(['CROSSNOVA - Exercise 1 - Thiago Vieira Fernandes']),
     ]),
     html.Div([
         dcc.Dropdown(
