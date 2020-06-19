@@ -1,0 +1,30 @@
+language: python
+python:
+  - "3.7.7"
+services:
+  - docker
+before_install:
+  - python --version
+  - pip install -U pip
+  - pip install docker-compose
+  - pip install -U pytest
+  - pip install codecov
+
+cache: pip
+
+install:
+  - pip install -r requirements.txt
+script:
+  - pip install -r requirements.txt
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker1"
+  env: "Docker-env"
+  bucket-name: "elasticbeanstalk-us-east-1-836603219799"
+  bucket-path: "docker1"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  edge: true
