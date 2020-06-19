@@ -1,0 +1,13 @@
+version: '3.8'
+
+services: 
+  app:
+    build: .
+    command: gunicorn -w 1 -b 0.0.0.0:8000 app:server --log-file - --access-logfile - --reload --keep-alive 2
+    env_file: 
+      - '.env'
+    # image: 'python: 3.7'
+    ports: 
+      - '5000:8000'
+    volumes: 
+      - '.:/app'
