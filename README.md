@@ -1,1 +1,1 @@
-# docker-app
+# docker / aws / python / flask / postgresql app-app
